@@ -1,0 +1,38 @@
+{
+  "name": "halo-autocomplete",
+  "version": "0.1.0",
+  "description": "An experimental autocomplete component",
+  "license": "MIT",
+  "repository": "hugomrdias/halo-autocomplete",
+  "author": "Hugo Dias <mail@hugodias.me> (http://hugodias.me/)",
+  "keywords": [
+    "input",
+    "autocomplete"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint --cache --fix index.js",
+    "release:patch": "npm version patch -m \"chore(release): Bump to %s\"",
+    "release:minor": "npm version minor -m \"chore(release): Bump to %s\"",
+    "release:major": "npm version major -m \"chore(release): Bump to %s\"",
+    "postversion": "git push --follow-tags",
+    "test": "faucet",
+    "test:watch": "watch faucet",
+    "dev": "nodemon index.js",
+    "serve:test": "browser-sync start --files 'test/*' --server 'test' & watchify index.js -d -o test/bundle.js -v"
+  },
+  "dependencies": {
+    "lodash": "3.10.1"
+  },
+  "devDependencies": {
+    "browser-sync": "2.11.1",
+    "eslint": "1.10.3",
+    "eslint-config-halo": "0.1.4",
+    "faucet": "0.0.1",
+    "tape": "4.4.0",
+    "watchify": "3.7.0"
+  },
+  "eslintConfig": {
+    "extends": "halo"
+  }
+}
