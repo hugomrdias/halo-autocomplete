@@ -22,7 +22,7 @@
     "serve:test": "browser-sync start --files 'test/*' --server 'test' & watchify index.js -d -o test/bundle.js -v"
   },
   "dependencies": {
-    "lodash": "3.10.1"
+    "lodash": "4.17.19"
   },
   "devDependencies": {
     "browser-sync": "2.11.1",
